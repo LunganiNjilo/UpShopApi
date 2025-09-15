@@ -1,0 +1,15 @@
+services:
+  upshopapi:
+    build:
+      context: .  # this points to the folder with Dockerfile
+      dockerfile: UpShopApi/Dockerfile 
+    ports:
+      - "5000:8080"          # host:container
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - DOTNET_URLS=http://+:8080;https://+:8081
+      - ConnectionStrings__DefaultConnection=Data Source=/app/sql/UpShop.db
+    volumes:
+      - ./UpShopApi/Infrastructure/sql/UpShop.db:/app/sql/UpShop.db     
