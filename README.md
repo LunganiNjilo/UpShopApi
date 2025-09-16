@@ -39,6 +39,7 @@ http://localhost:5000/api/products/SKU-0001
 ```
 
 ### 🧪 Running Tests
+#### Unit/Integration Tests
 The test project is located at:
 ```text
 ..\UpShopApi\UpShopTests
@@ -47,6 +48,41 @@ To run the tests from the terminal:
 
 ```bash
 cd ..\UpShopApi\UpShopTests
+dotnet test
+```
+#### Benchmark Tests
+Run the benchmark test project with:
+```bash
+cd ..\UpShopApi\UpShopApi.Benchmarks
+dotnet test
+```
+##### Thresholds
+Each benchmark test validates performance against thresholds (in milliseconds).
+```csharp
+public static class PerformanceThresholds
+{
+    public const int GetAllProductsThresholdMs = 150;       // ≤ 150 ms
+    public const int GetProductBySkuThresholdMs = 50;       // ≤ 50 ms
+    public const int ConcurrentRequestThresholdMs = 200;    // ≤ 200 ms
+}
+```
+- Development: You may relax thresholds (e.g. +50ms) since local builds aren’t optimized.
+- Testing: Use thresholds close to production to catch regressions.
+- Production: Keep strict thresholds (≤ 150ms for list endpoints, ≤ 50ms for single-item endpoints).
+
+To adjust thresholds, simply modify the values above and re-run tests.
+
+#### Functional Tests
+In this project, the functional tests were created to validate the behavior of the API endpoints, especially focusing on Products and ensuring that the clean architecture (Controller → Services → Infrastructure) works end-to-end.
+
+The test project is located at:
+```text
+..\UpShopApi\UpShopApi.FunctionalTests
+```
+To run the tests from the terminal:
+
+```bash
+cd ..\UpShopApi\UpShopApi.FunctionalTests
 dotnet test
 ```
 
