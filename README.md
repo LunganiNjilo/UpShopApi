@@ -50,6 +50,8 @@ To run the tests from the terminal:
 cd ..\UpShopApi\UpShopTests
 dotnet test
 ```
+<img width="1108" height="625" alt="image" src="https://github.com/user-attachments/assets/7a0ead3c-13de-48a0-b77e-cdbfd1d57d2a" />
+
 #### Benchmark Tests
 Run the benchmark test project with:
 ```bash
@@ -72,6 +74,9 @@ public static class PerformanceThresholds
 
 To adjust thresholds, simply modify the values above and re-run tests.
 
+<img width="1117" height="627" alt="image" src="https://github.com/user-attachments/assets/718f16d2-00aa-4a04-8563-1a0648a94658" />
+
+
 #### Functional Tests
 In this project, the functional tests were created to validate the behavior of the API endpoints, especially focusing on Products and ensuring that the clean architecture (Controller → Services → Infrastructure) works end-to-end.
 
@@ -85,6 +90,8 @@ To run the tests from the terminal:
 cd ..\UpShopApi\UpShopApi.FunctionalTests
 dotnet test
 ```
+<img width="1112" height="626" alt="image" src="https://github.com/user-attachments/assets/777512c7-fb53-4d4f-97ce-6800fee723c9" />
+
 
 ### 4.Database Information
 
