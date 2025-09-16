@@ -35,7 +35,7 @@ http://localhost:5000/api/products
 - Get a single product by SKU:
   
 ```bash
-http://localhost:5000/api/products
+http://localhost:5000/api/products/SKU-0001
 ```
 
 ### 🧪 Running Tests
