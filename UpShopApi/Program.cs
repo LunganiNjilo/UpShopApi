@@ -42,7 +42,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
         : "Infrastructure/sql/UpShop.db"); // local dev fallback
 
 builder.Services.AddScoped<IRepository<Product>>(sp =>
-    new GenericRepository<Product>(connectionString, "Products"));
+    new GenericRepository<Product>(connectionString, "tb_Products"));
 
 builder.Services.AddCustomErrorHandling();
 builder.Services.AddScoped<IProductService, ProductService>();

@@ -1,18 +1,18 @@
-﻿# Visual Studio files
+﻿# Visual Studio user-specific files
 .vs/
-*.user
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.jfm
+*.pdb
+*.cachefile
 
-# Build outputs
+# VS caches and indexes
+**/DocumentLayout.json
+**/FileContentIndex/
+
+# Build output
 bin/
 obj/
-
-# Rider files
-.idea/
-
-# Logs
-*.log
-
-# OS files
-Thumbs.db
-.DS_Store
