@@ -1,18 +1,77 @@
-﻿# Visual Studio user-specific files
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.dbmdl
-*.jfm
-*.pdb
-*.cachefile
-
-# VS caches and indexes
-**/DocumentLayout.json
-**/FileContentIndex/
-
-# Build output
+﻿# ======================
+# Build Folders
+# ======================
 bin/
 obj/
+out/
+TestResults/
+*.nupkg
+
+# ======================
+# Visual Studio
+# ======================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ======================
+# Rider
+# ======================
+.idea/
+
+# ======================
+# Resharper
+# ======================
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# ======================
+# DotCover
+# ======================
+*.dotCover
+
+# ======================
+# Visual Studio Code
+# ======================
+.vscode/
+
+# ======================
+# SQLite / Database / Local Cache
+# ======================
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.mdf
+*.ldf
+
+# ======================
+# Logs
+# ======================
+*.log
+logs/
+npm-debug.log*
+
+# ======================
+# Packages
+# ======================
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# ======================
+# OS Files
+# ======================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ======================
+# Others
+# ======================
+*.vsix
