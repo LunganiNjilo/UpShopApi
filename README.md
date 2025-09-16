@@ -46,7 +46,7 @@ The test project is located at:
 To run the tests from the terminal:
 
 ```bash
-cd C:\Src\testrepo\UpShopApi\UpShopTests
+cd ..\UpShopApi\UpShopTests
 dotnet test
 ```
 
